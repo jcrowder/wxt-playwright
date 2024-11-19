@@ -23,8 +23,10 @@ test("Popup counter increments when clicked (fake error)", async ({ page, extens
 
   await popup.clickCounter();
   expect(await popup.getCounterText()).toEqual("count is 2");
+  await popup.clickCounter();
+  expect(await popup.getCounterText()).toEqual("count is 3");
 
   await popup.clickCounter();
-  expect(await popup.getCounterText()).toEqual("count is 2");
+  expect(await popup.getCounterText()).toEqual("count is 4");
 
 });
